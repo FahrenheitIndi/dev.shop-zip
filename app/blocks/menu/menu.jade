@@ -1,0 +1,20 @@
+mixin menu()
+    +b.container._blue&attributes(attributes)
+        +b.row&attributes(attributes)
+            +b.UL.menu(role='navigation')&attributes(attributes)
+                +e.LI.item._sub&attributes(attributes)
+                    +e.A.link(href='/')&attributes(attributes) Запчасти для инструмента
+                    +b.UL.sub-menu&attributes(attributes)
+                        +e.LI.item&attributes(attributes)
+                            +e.A.link(href='')&attributes(attributes) Запчасти для электроинструмента
+                +e.LI.item._sub&attributes(attributes)
+                    +e.A.link(href='/')&attributes(attributes) Запчасти для бытовой техники
+                    +b.UL.sub-menu&attributes(attributes)
+                        +e.LI.item&attributes(attributes)
+                            +e.A.link(href='')&attributes(attributes) Запчасти для электроинструмента
+                +e.LI.item&attributes(attributes)
+                    +e.A.link(href='/')&attributes(attributes) Заказ запчастей
+                +e.LI.item&attributes(attributes)
+                    +e.A.link(href='/')&attributes(attributes) Сервисный центр
+                +e.LI.item&attributes(attributes)
+                    +e.A.link(href='/')&attributes(attributes) Контакты

@@ -1,0 +1,11 @@
+include ../row/row
+include ../logo/logo
+include ../search/search
+include ../contact/contact
+
+mixin header()
+    +row
+        +b.header&attributes(attributes)
+            +logo
+            +search
+            +contact

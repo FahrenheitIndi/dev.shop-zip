@@ -1,0 +1,8 @@
+mixin cart()
+    +b.cart&attributes(attributes)
+        +e.A.link(href='/cart')&attributes(attributes)
+            +e.count&attributes(attributes)
+                +e.SPAN&attributes(attributes) 1
+            +e.IMG(src='../assets/img/cart.svg')&attributes(attributes)
+        +e.price&attributes(attributes)
+            +e.SPAN&attributes(attributes) 16 945 руб.

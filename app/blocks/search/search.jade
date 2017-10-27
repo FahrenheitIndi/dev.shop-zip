@@ -1,0 +1,7 @@
+include ../cart/cart
+mixin search()
+    +b.search&attributes(attributes)
+        +b.FORM.search-form&attributes(attributes)
+            +e.INPUT.input(placeholder='Поиск запчастей по каталогу')&attributes(attributes)
+            +e.BUTTON.button&attributes(attributes)
+    +cart

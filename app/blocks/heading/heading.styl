@@ -1,0 +1,52 @@
+.heading
+  height 2.5rem
+  clearfix()
+.heading__link
+  position relative
+  padding-left 24px
+  display inline-block
+  font-size 12px
+  line-height 2.5rem
+  text-decoration none
+  &:hover
+    text-decoration underline
+  color rgb(146, 96, 46)
+
+.heading__link:first-child
+  margin-right  28px
+
+.heading__link:before
+  position absolute
+  top 8px
+  left 0
+  width 24px
+  height 24px
+  content ''
+  background-image url(../img/message.svg)
+
+.heading__link.heading__link_delivery:before
+  background-image url(../img/delivery.svg)
+
+.user-name
+  float right
+  height 100%
+
+.user-name__link
+  position relative
+  display block
+  font-family 'Helvetica Neue', sans-serif
+  font-size 12px
+  line-height 2.5rem
+  text-decoration none
+  &:hover
+    text-decoration underline
+  color rgb(255, 255, 255)
+
+.user-name__link:before
+  position absolute
+  top 8px
+  left -26px
+  width 24px
+  height 24px
+  content ''
+  background-image url(../img/user.svg)

@@ -1,0 +1,7 @@
+include ../row/row
+
+mixin banner
+    +row
+        +b.banner&attributes(attributes)
+            +e.IMG.item(src='../assets/img/banner.png')&attributes(attributes)
+            +e.A.button(href='')&attributes(attributes) Перейти

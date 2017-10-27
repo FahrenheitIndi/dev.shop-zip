@@ -1,0 +1,21 @@
+include /../node_modules/bemto.jade/bemto
+include /../node_modules/jade-injected/jade-injected
+include ../page/page
+include ../heading/heading
+include ../header/header
+include ../menu/menu
+include ../box/box
+include ../banner/banner
+include ../scripts/scripts
+
+doctype html
+html(lang='ru')
+	include ../head/head
+	+page
+		+heading
+		+header
+		+menu
+		+box
+			+banner
+			block content
+			+scripts(['app.min.js'])

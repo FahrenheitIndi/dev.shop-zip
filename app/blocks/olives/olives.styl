@@ -1,0 +1,31 @@
+.olives
+  position relative
+  height 13.5rem
+  margin-bottom 2.25rem
+  padding-x(6.25rem)
+  padding-y(4rem)
+  &:before
+    position absolute
+    top 3.75rem
+    left 1rem
+    width 60px
+    height 96px
+    content ''
+    background-image url('../img/olives.svg')
+  &:after
+    position absolute
+    top 3.75rem
+    right 1rem
+    width 60px
+    height 96px
+    content ''
+    background-image url('../img/olives.svg')
+    transform scale(-1, 1)
+
+.olives__text
+  position relative
+  font-size 1.5rem
+  line-height 1.3
+  text-align center
+  color rgb(146, 96, 46)
+

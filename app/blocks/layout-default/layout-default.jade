@@ -6,6 +6,8 @@ include ../header/header
 include ../menu/menu
 include ../box/box
 include ../banner/banner
+include ../olives/olives
+include ../parts/parts
 include ../scripts/scripts
 
 doctype html
@@ -17,5 +19,7 @@ html(lang='ru')
 		+menu
 		+box
 			+banner
+			+olives
+			+parts
 			block content
 			+scripts(['app.min.js'])

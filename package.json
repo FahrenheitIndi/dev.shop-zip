@@ -124,6 +124,7 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
+    "inputmask": "^3.3.10",
     "siema": "^1.4.6"
   }
 }

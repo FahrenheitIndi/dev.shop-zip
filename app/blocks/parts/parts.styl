@@ -1,8 +1,3 @@
-.part
-  padding-y(2rem)
-  display flex
-  justify-content space-between
-
 .parts__title
   position relative
   font-size 2.25rem
@@ -10,11 +5,18 @@
   text-align left
   color rgb(34, 34, 34)
   &:after
+    position absolute
+    top 50%
+    right 0
     width 40rem
     height 0.1875rem
     content ''
-    color rgb(153, 153, 153)
+    background-color  rgb(153, 153, 153)
 
+.part
+  padding-y(2rem)
+  display flex
+  justify-content space-between
 
 .part-item
   position relative

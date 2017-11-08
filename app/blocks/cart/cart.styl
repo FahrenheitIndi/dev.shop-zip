@@ -1,13 +1,18 @@
 .cart
-  margin-left 4.5rem
+  padding-y(0.5rem)
+  padding-left 0.5rem
+  border-left 1px solid rgb(221,221,221)
   display inline-block
-  vertical-align middle
+  vertical-align top
+
 .cart__link,
-.cart__price
+.cart__prices
   display inline-block
-  vertical-align middle
+  vertical-align top
+
 .cart__link
   position relative
+
 .cart__count
   position absolute
   top -6px
@@ -18,13 +23,20 @@
   border-radius 50%
   background-color rgb(255, 166, 77)
   text-align center
+
 .cart__count span
   font-size 10px
   font-weight 700
   line-height 21px
   color rgb(255, 255, 255)
+
+.cart__prices
+  margin-left 0.8rem
+  font-size 14px
+  color rgb(1, 1, 1)
+
+.cart__text
+  margin-bottom 0.5rem
+
 .cart__price
-  margin-left 0.3rem
-  font-size 18px
-  font-weight 700
-  color rgb(34, 34, 34)
+  font-size 0.6875rem

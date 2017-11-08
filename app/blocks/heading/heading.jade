@@ -1,8 +1,13 @@
 mixin heading()
-    +b.container_orange&attributes(attributes)
-        +b.row&attributes(attributes)
-            +b.heading&attributes(attributes)
-                +e.A.link_article(href='#')&attributes(attributes) Полезные статьи
-                +e.A.link_delivery(href='#')&attributes(attributes) Доставка
-                +b.user-name&attributes(attributes)
-                    +e.A.link(href='#')&attributes(attributes) Василий Кутузовский
+    +b.container_grey
+        +b.row
+            +b.heading
+                +b.UL.heading-menu
+                    +e.LI.item._article
+                        +e.A.link(href='#') Полезные статьи
+                    +e.LI.item._delivery
+                        +e.A.link(href='#') Доставка
+                    +e.LI.item._map
+                        +e.A.link(href='#') Карта сайта
+                +b.user-name
+                    +e.A.link(href='#') Василий Кутузовский

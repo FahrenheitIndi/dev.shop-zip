@@ -1,32 +1,31 @@
 .contact
-  float right
-  height 100%
-.contact__phone,
-.contact__mail
+  padding-y(0.5rem)
+  margin-right 1rem
+  display inline-block
+  vertical-align top
+
+.contact__phone
   position relative
   display block
-  font-size 18px
-  font-weight 700
   text-align center
   text-decoration none
   &:hover
-    text-decoration none
+    text-decoration underline
   color rgb(1, 1, 1)
-.contact__phone:before,
-.contact__mail:before
+
+.contact__phone:before
   position absolute
-  left -25px
+  left -20px
   width 1rem
   content ''
 
 .contact__phone:before
-  top 2px
   height 16px
   background-image url(../img/icon-phone.svg)
 
-.contact__mail:before
-  top 5px
-  height 11px
-  background-image url(../img/icon-mail.svg)
 .contact__phone
-  margin-bottom 0.3rem
+  margin-bottom 0.5rem
+
+.contact__hours
+  font-size 0.75rem
+  text-align right

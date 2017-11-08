@@ -1,3 +1,23 @@
+.articles
+  position relative
+
+.articles__button
+  position absolute
+  width 1.5rem
+  height 2.875rem
+  top 50%
+  border none
+  display block
+  content ''
+  background url('../img/arrow.svg')
+
+.articles__button_left
+  left -2.25rem
+
+.articles__button_right
+  right -2.25rem
+  transform scale(-1, 1)
+
 .articles__title
   position relative
   font-size 2.25rem
@@ -14,16 +34,20 @@
     background-color  rgb(153, 153, 153)
 
 .article
-  /*display flex
-  justify-content space-between*/
+  margin-top 1.75rem
+  margin-bottom 4.75rem
 
 .article-item
+  position relative
   width 16.1875rem
+  margin-x(auto)
   border solid 1px #979797
 
 .article-item__link
+  position relative
   margin-x(auto)
   padding-top 1.125rem
+  padding-bottom 0.75rem
   font-size 1.125rem
   display block
   font-weight 700
@@ -32,3 +56,32 @@
   color rgb(34, 34, 34)
   &:hover
       text-decoration underline
+  &:after
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    width 4.125rem
+    height 3px
+    margin-x(auto)
+    content ''
+    background-color rgb(34, 34, 34)
+
+.article-item__img
+  margin-top 1.625rem
+  display block
+
+.article-item__read
+  position absolute
+  right 0
+  left 0
+  bottom 1.5rem
+  width 9.125rem
+  height 2rem
+  margin-x(auto)
+  line-height 2rem
+  display block
+  text-align center
+  text-decoration none
+  color rgb(34, 34, 34)
+  background-color rgb(255, 166, 77)

@@ -1,31 +1,51 @@
 .heading
-  height 2.5rem
+  height 2.25rem
   clearfix()
-.heading__link
+
+.heading-menu
+  float left
+  display block
+  font-size 0.875rem
+  list-style circle
+
+.heading-menu__item
   position relative
-  padding-left 24px
+  margin-right 0.625rem
+  padding-left 1.8rem
   display inline-block
-  font-size 12px
-  line-height 2.5rem
-  text-decoration none
+  vertical-align middle
+  opacity 0.7
   &:hover
-    text-decoration underline
-  color rgb(146, 96, 46)
+    opacity 1
 
-.heading__link:first-child
-  margin-right  28px
-
-.heading__link:before
+.heading-menu__item_article:before,
+.heading-menu__item_delivery:before,
+.heading-menu__item_map:before
   position absolute
   top 8px
   left 0
   width 24px
   height 24px
   content ''
+
+.heading-menu__item_article:before
   background-image url(../img/message.svg)
 
-.heading__link.heading__link_delivery:before
+.heading-menu__item_delivery:before
   background-image url(../img/delivery.svg)
+
+.heading-menu__item_map:before
+  background-image url(../img/sitemap.svg)
+
+.heading-menu__link
+  display block
+  line-height 2.25rem
+  text-decoration none
+  &:hover
+    text-decoration underline
+  color rgb(1, 1, 1)
+
+
 
 .user-name
   float right
@@ -38,9 +58,11 @@
   font-size 12px
   line-height 2.5rem
   text-decoration none
+  opacity 0.8
   &:hover
     text-decoration underline
-  color rgb(255, 255, 255)
+    opacity 1
+  color rgb(1, 1, 1)
 
 .user-name__link:before
   position absolute

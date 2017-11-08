@@ -11,6 +11,7 @@ include ../parts/parts
 include ../question/question
 include ../catalog/catalog
 include ../articles/articles
+include ../footer/footer
 include ../scripts/scripts
 
 doctype html
@@ -27,5 +28,5 @@ html(lang='ru')
 			+question
 			+catalog
 			+articles
-			//block content
-			+scripts(['app.min.js'])
+		+footer
+		+scripts(['app.min.js'])

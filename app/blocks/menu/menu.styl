@@ -1,7 +1,5 @@
 .menu
   width 100%
-  border-left solid 1px  rgb(33, 131, 203)
-  border-right solid 1px rgb(33, 131, 203)
   display flex
   justify-content space-between
   align-items center
@@ -9,7 +7,6 @@
 .menu__item
   flex-grow  1
   height 2.25rem
-  border-right solid 1px rgb(33, 131, 203)
   &:last-child
     border-right none
   &:hover .sub-menu
@@ -17,7 +14,21 @@
     visibility visible
     opacity 1
   &:hover .menu__link
-    background-color rgb(65, 169, 245)
+    background-color rgb(166, 40, 62)
+    color rgb(255, 255, 255)
+
+.menu__item_sub .menu__link:after
+  position absolute
+  width 12px
+  height 6px
+  right 8px
+  content '\23F7'
+  color rgb(255, 255, 255)
+  transition transform .4s ease-out
+
+.menu__item_sub:hover .menu__link:after
+  top 30px
+  transform scale(1, -1)
 
 .menu__link
   position relative
@@ -30,20 +41,10 @@
   text-transform uppercase
   color rgb(255, 255, 255)
 
-.menu__item_sub .menu__link:after
-  position absolute
-  width 12px
-  height 6px
-  right 8px
-  content '\23F7'
-  color rgb(255, 255, 255)
-
 .sub-menu
   position relative
-  border-left solid 1px  rgb(33, 131, 203)
-  border-right solid 1px rgb(33, 131, 203)
   display block
-  background-color rgb(33, 131, 203)
+  background-color rgb(255, 255, 255)
   visibility hidden
   opacity 0
   transition .3s ease-in-out
@@ -53,13 +54,13 @@
 
 .sub-menu__link
   font-size 12px
-  border-bottom solid 1px #238fdf
+  border-bottom 1px solid rgb(221, 221, 221)
   display block
   line-height 3.3rem
   text-align center
   text-decoration none
   text-transform uppercase
-  color rgb(255, 255, 255)
+  color rgb(1, 1, 1)
   transition .4s ease-in-out
   &:hover
-    background-color rgb(65, 169, 245)
+    font-weight 500

@@ -1,11 +1,13 @@
 include ../row/row
 include ../logo/logo
 include ../search/search
-include ../contact/contact
+include ../info/info
+
 
 mixin header()
     +row
-        +b.header&attributes(attributes)
+        +b.header
             +logo
             +search
-            +contact
+            +info
+

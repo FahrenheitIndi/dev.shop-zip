@@ -20,15 +20,21 @@
   justify-content space-between
 
 .product-item
+  position relative
+  min-height 24rem
   margin-bottom 2rem
   padding-x(0.875rem)
   flex-basis 12.875rem
   border solid 1px #cccccc
 
 .product-item__link
+  height 9.125rem
   display block
 
 .product-item__image
+  max-width 100%
+  /*height auto*/
+  display block
   border-bottom solid 1px #cccccc
 
 .product-item__name
@@ -44,13 +50,19 @@
   cursor pointer
   overflow hidden
   text-overflow ellipsis
+  text-decoration none
   &:hover
     text-decoration underline
 
 
 .product-item__prices
-  padding-top 1.625rem
-  padding-bottom 0.75rem
+  position absolute
+  width 90%
+  left 0
+  right 0
+  bottom 6.875rem
+  margin 1.625rem auto 0.75rem
+  padding-bottom 0.2rem
   border-bottom solid 1px #cccccc
   text-align right
 
@@ -66,8 +78,13 @@
   font-weight 500
 
 .product-item__buy
+  position absolute
+  margin-x(auto)
+  margin-bottom 1rem
   padding-top 0.75rem
-  padding-bottom  1.5rem
+  left 0
+  right 0
+  bottom 0
   text-align: center;
 
 .control
@@ -92,8 +109,9 @@
   text-align center
 
 .product-item__button
+  width 80%
   height 2rem
-  margin-top 0.6rem
+  margin 1rem auto 0
   font-size 0.875rem
   line-height 2rem
   font-weight 500

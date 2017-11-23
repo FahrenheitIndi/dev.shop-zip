@@ -3,6 +3,12 @@ include /blocks/index/index
 extends /blocks/layout-default/layout-default
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Главня страница';
 
-//block content
+block content
+	+banner
+	+olives
+	+parts
+	+question
+	+catalog
+	+articles

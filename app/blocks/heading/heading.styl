@@ -1,3 +1,8 @@
+.heading-wrapper
+  position relative
+  z-index 5
+  background #fff
+
 .heading
   height 2.25rem
   clearfix()
@@ -45,15 +50,16 @@
     text-decoration underline
   color rgb(1, 1, 1)
 
-.user-name
+.user-name,
+.login
   float right
   height 100%
+  font-size: 0.875rem;
 
 .user-name__link
   position relative
   display block
   font-family 'Helvetica Neue', sans-serif
-  font-size 12px
   line-height 2.5rem
   text-decoration none
   opacity 0.8
@@ -70,3 +76,21 @@
   height 24px
   content ''
   background-image url(../img/user.svg)
+
+.login__item
+  display inline-block
+  vertical-align middle
+
+.login .login__item:first-child
+  margin-right 0.625rem
+
+.login__link
+  line-height 2.2rem
+  display block
+  text-decoration: none;
+  color: #010101
+  opacity 0.7
+  &:hover
+    text-decoration underline
+    opacity 1
+

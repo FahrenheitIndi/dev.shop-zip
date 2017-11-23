@@ -9,5 +9,10 @@ mixin heading()
                         +e.A.link(href='#') Доставка
                     +e.LI.item._map
                         +e.A.link(href='#') Карта сайта
-                +b.user-name
-                    +e.A.link(href='#') Василий Кутузовский
+                //+b.user-name
+                    //+e.A.link(href='#') Василий Кутузовский
+                +b.UL.login
+                    +e.LI.item._in
+                        +e.A.link(href="/") Войдите
+                    +e.LI.item._reg
+                        +e.A.link(href="/") Регистрация

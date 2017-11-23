@@ -6,6 +6,7 @@ include ../header/header
 include ../menu/menu
 include ../box/box
 include ../banner/banner
+include ../service-order/service-order
 include ../olives/olives
 include ../parts/parts
 include ../question/question
@@ -18,15 +19,12 @@ doctype html
 html(lang='ru')
 	include ../head/head
 	+page
-		+heading
-		+header
-		+menu
+		+b.heading-wrapper
+			+heading
+			+header
+			+menu
 		+box
-			+banner
-			+olives
-			+parts
-			+question
-			+catalog
-			+articles
-		+footer
+			+b.content
+				block content
+			+footer
 		+scripts(['app.min.js'])

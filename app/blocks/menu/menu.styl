@@ -9,13 +9,16 @@
   height 2.25rem
   &:last-child
     border-right none
+  &:hover .menu__link
+    background-color rgb(166, 40, 62)
+    color rgb(255, 255, 255)
+
+.menu__item_sub
   &:hover .sub-menu
     z-index 4
     visibility visible
     opacity 1
-  &:hover .menu__link
-    background-color rgb(166, 40, 62)
-    color rgb(255, 255, 255)
+
 
 .menu__item_sub .menu__link:after
   position absolute

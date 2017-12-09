@@ -5,8 +5,8 @@
   align-items center
 
 .menu__item
+  position relative
   flex-grow  1
-  height 2.25rem
   &:last-child
     border-right none
   &:hover .menu__link
@@ -16,6 +16,7 @@
 .menu__item_sub
   &:hover .sub-menu
     z-index 4
+    height 100%
     visibility visible
     opacity 1
 
@@ -27,7 +28,7 @@
   right 8px
   content '\23F7'
   color rgb(255, 255, 255)
-  transition transform .4s ease-out
+  transition transform .3s ease-out
 
 .menu__item_sub:hover .menu__link:after
   top 30px
@@ -36,34 +37,43 @@
 .menu__link
   position relative
   padding-x(30px)
-  font-size 12px
+  font-size 0.8rem
   line-height 2.25rem
   display block
   text-align: center;
   text-decoration none
   text-transform uppercase
   color rgb(255, 255, 255)
+  &:hover
+    text-decoration none
 
 .sub-menu
-  position relative
+  position absolute
+  top 100%
+  left 0
   display block
-  background-color rgb(255, 255, 255)
   visibility hidden
   opacity 0
   transition .3s ease-in-out
 
-.sub-menu__item
-  height 3.3rem
-
 .sub-menu__link
-  font-size 12px
+  padding-y(1rem)
+  padding-left 0.75rem
+  padding-right 4rem
   border-bottom 1px solid rgb(221, 221, 221)
   display block
-  line-height 3.3rem
+  font-size 0.8rem
   text-align center
   text-decoration none
   text-transform uppercase
+  background-color rgb(255, 255, 255)
   color rgb(1, 1, 1)
-  transition .4s ease-in-out
+  transition all .3s ease-in-out
+  white-space nowrap
   &:hover
-    font-weight 500
+    font-weight 700
+    text-decoration none
+
+.container-fluid_dark
+  +below(tablet-landspace)
+    display none

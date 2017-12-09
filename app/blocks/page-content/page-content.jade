@@ -1,0 +1,26 @@
+include ../row/row
+
+mixin page-content()
+    +row
+        +b.page-content(itemtype='http://schema.org/WebPage')
+            +e.H1(itemprop='name') Контакты
+            +b.page-description(itemprop='description')
+                +e.P Запчасти для Бытовой техники и Электробензоинструмента Оптом!
+                +e.P г. Рязань, ул.Зубковой 8А
+                +e.P Мы работаем с понедельника по пятницу с 10 до 17 . Суббота, воскресенье и праздники - выходной
+                +e.P Напишите нам на <a href="mailto:info@shop-zip.ru">info@shop-zip.ru</a>
+                +e.P позвоните по телефону в Рязани <a href="tel:+74912513115">+7 (4912) 513-115</a>
+                +e.P или отправьте сообщение:
+                +b.FORM.feedback-form
+                    +b.fields
+                        +b.field
+                            +e.LABEL.label(for="name") Ваше имя
+                            +e.INPUT.input(id="name" name="name" type="text" autocomplete)
+                    +b.fields
+                        +b.field
+                            +e.LABEL.label(for="email") Ваше Email
+                            +e.INPUT.input(id="email" name="email" type="email" autocomplete)
+                    +b.fields
+                        +b.field
+                            +e.LABEL.label(for="text") Ваше сообщение
+                            +e.TEXTAREA.text(id="text" name="text")

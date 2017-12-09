@@ -1,19 +1,65 @@
 include ../row/row
+include ../banner/banner
+include ../olives/olives
 
 mixin service-order()
     +row
+        +banner
+        +olives
         +b.service-order
             +e.SPAN.text Оставьте заявку и получите скидку 10% на проведение работ!
             +b.FORM.service-form
                 +b.field-group
-                    +e.INPUT.input._name(placeholder="Имя")
-                    +e.INPUT.input._phone(placeholder="+7 (999) 999-99-99")
-                    +e.INPUT.input._button(type='submit' value="Отправить")
+                    +b.field._name
+                        +e.INPUT.input._name(name="user_name")
+                        +e.LABEL.label(for="user_name") Имя
+                    +b.field._phone
+                        +e.INPUT.input._phone
+                        +e.LABEL.label(for="user_phone") Ваш телефон
+                    +b.field._button
+                        +e.INPUT.input._button(type='submit' value="Отправить")
             +b.border
-        +b.H3.service-title Мы способны устранить 100% ваших поломок <br> 91% поломок устраняются в день обращения
         +b.UL.service-list
             +e.LI.item
                 +e.A.link
                     +e.IMG(src="../assets/img/washing.png")
                 +e.A.name Ремонт стиральных машин
                 +b.DIV.service-price от <span>800</span> руб
+            +e.LI.item
+                +e.A.link
+                    +e.IMG(src="../assets/img/washing.png")
+                +e.text Ремонт стиральных машин
+            +e.LI.item
+                +e.A.link
+                    +e.IMG(src="../assets/img/washing.png")
+                +e.text Ремонт стиральных машин
+            +e.LI.item
+                +e.A.link
+                    +e.IMG(src="../assets/img/washing.png")
+                +e.text Ремонт стиральных машин
+            +e.LI.item
+                +e.A.link
+                    +e.IMG(src="../assets/img/washing.png")
+                +e.text Ремонт стиральных машин
+            +e.LI.item
+                +e.A.link
+                    +e.IMG(src="../assets/img/washing.png")
+                +e.text Ремонт стиральных машин
+
+        +b.service-text
+            +e.P Наличие бытовой техники дома способно существенно облегчить ведение домашнего хозяйства. Но как быть, если бытовая техника сломалась? Попытки починить ее...
+        +b.reviews
+            +e.H3.title Отзывы
+            +e.A.button Оставить отзыв
+        +b.reviews-slider
+            +b.UL.reviews-list
+                +e.LI.item
+                    +e.IMG.image(src="../assets/img/oksana.jpg")
+                    +e.SPAN Оксана
+                +e.LI.item
+                    +e.IMG.image(src="../assets/img/oksana.jpg")
+                    +e.SPAN Оксана
+            +b.control
+                +e.BUTTON.control__prev
+                +e.BUTTON.control__next
+

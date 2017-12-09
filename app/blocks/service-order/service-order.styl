@@ -1,7 +1,6 @@
 .service-order
   position relative
   z-index 2
-  margin 1.5rem 0
   padding-x(6.5rem)
   padding-y(4rem)
   background-image radial-gradient(circle at 69% 63%, #6cc0ec, #6eb3e7)
@@ -34,49 +33,71 @@
   text-align center
   overflow hidden
 
-.field-group__input,
-.field-group__button
+.field
+  position relative
   width calc(100%/3 - 4rem)
-  height 3.2rem
-
-.field-group__input
-  padding-x(1.5rem)
-  border none
-
-.field-group__input_name
-  float left
-
-.field-group__input_phone
+  display inline-block
   color rgb(54, 57, 60)
 
-.field-group__input_button
+.field_name
+  float left
+
+.field_button
   float right
+  cursor pointer
+
+.field__input
+  width 100%
+  padding-x(1.5rem)
+  height 3.2rem
+  font-size 1.2rem
+  border none
+  border-radius 5px
+
+.field__input_button
   font-weight 400
-  background rgb(254, 192, 6)
+  background rgb(255, 166, 69)
   text-transform uppercase
+  transition color .3s linear
+  &:hover
+    color rgb(255, 255, 255)
+
+.field__label
+  position absolute
+  left 1.5rem
+  top 1rem
+  font-size 1.2rem
+  pointer-events: none;
+  opacity 1
+  transition: opacity .05s ease-out 0s;
+
+.field__input.not-empty + .field__label
+  opacity: 0
+
 
 .service-title
   margin-y(2rem)
   font-size 1.5rem
-  font-weight 600
+  font-weight 500
   line-height 1.3
   text-align center
 
 .service-list
+  margin-y(2rem)
   padding-x(1rem)
   display flex
   flex-wrap wrap
   justify-content space-between
-  align-items stretch
+  list-style none
 
 .service-list__item
   position relative
-  width 270px
+  height 230px
+  flex-basis 270px
   margin-bottom 30px
   padding 20px 35px 0
   border-radius 10px
   box-shadow 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
-  flex-basis 270px
   text-align center
   cursor pointer
   transition all .3s ease-out
@@ -86,6 +107,10 @@
 
 .service-list__link
   display block
+  text-decoration none
+  &:hover
+    text-decoration underline
+
 
 .service-list__name
   margin-top 10px
@@ -93,6 +118,12 @@
   padding-bottom 20px
   display block
   color rgb(22, 141, 226)
+  text-decoration none
+
+.service-list__text
+  margin-top 10px
+  margin-bottom 35px
+  padding-bottom 20px
 
 .service-price
   position absolute
@@ -101,9 +132,60 @@
   bottom 0
   left 0
   right 0
-  background-color rgb(254,192,6)
+  background-color rgb(255, 166, 69)
   border-radius 0 0 10px 10px
   color rgb(1,1,1)
   text-align center
   font-size 20px
   line-height 40px
+
+.service-text
+  margin-y(2.5rem)
+  padding-x(1.5rem)
+  padding-y(1.5rem)
+  font-size 1.2rem
+  font-size 300
+
+.reviews
+  overflow hidden
+  margin-y(2.5rem)
+  padding-x(1.5rem)
+
+.reviews__title
+  float left
+  margin 0
+  font-size 2rem
+  font-weight 500
+  line-height 3.2rem
+
+.reviews__button
+  height 3.2rem
+  width 15.33rem
+  padding-x(1.5rem)
+  float right
+  border-radius 5px
+  font-size 1.2rem
+  line-height 3.2rem
+  font-weight 400
+  text-align center
+  text-transform uppercase
+  text-decoration none
+  background-color rgb(255, 166, 69)
+  cursor pointer
+  color rgb(1, 1, 1)
+  transition color .3s linear
+  &:hover
+    color rgb(255, 255, 255)
+
+.reviews-slider
+  width 100%
+
+.reviews-list
+  list-style none
+  padding-left 0
+
+.reviews-list__image
+  width 10.625rem
+  height 10.625rem
+  border-radius 50%
+

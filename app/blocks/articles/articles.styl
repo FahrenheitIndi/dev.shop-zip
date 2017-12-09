@@ -10,6 +10,8 @@
   display block
   content ''
   background url('../img/arrow.svg')
+  +below(desktop)
+    display none
 
 .articles__button_left
   left -2.25rem
@@ -32,6 +34,10 @@
     height 0.1875rem
     content ''
     background-color  rgb(153, 153, 153)
+  +below(992px)
+    text-align center
+    &:after
+      display none
 
 .article
   margin-top 1.75rem

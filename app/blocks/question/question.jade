@@ -1,16 +1,17 @@
 mixin question()
-    +b.container._blue
-        +b.row
-            +b.question
-                +e.title Не нашли что искали?
-                +e.SPAN.text Заполните заявку и наш специалист свяжется с вами, чтобы дать консультацию по вашим вопросам.
-                +b.question-form
-                    +e.filed
-                      +e.LABEL.label(for='name') Ваше имя:
-                      +e.INPUT.input(placeholder='Иван' name='name')
-                    +e.filed
-                        +e.LABEL.label(for='phone') Ваш телефон:
-                        +e.INPUT.input(placeholder='+7 (XXX) XXX-XX-XX' name='phone' type='tel')
-                    +e.field._button
-                        +e.BUTTON.button Перезвоните мне
-                +e.agree Отправляя заявку, Вы соглашаетесь на обработку персональных данных и политикой конфиденциальности
+    +b.container-fluid._blue
+        +b.container
+            +b.row
+                +b.question
+                    +e.title Не нашли что искали?
+                    +e.text Заполните заявку и наш специалист свяжется с вами, чтобы дать консультацию по вашим вопросам.
+                    +b.question-form
+                        +e.filed
+                          +e.LABEL.label(for='name') Ваше имя:
+                          +e.INPUT.input(placeholder='Иван' name='name')
+                        +e.filed
+                            +e.LABEL.label(for='phone') Ваш телефон:
+                            +e.INPUT.input(placeholder='+7 (XXX) XXX-XX-XX' name='phone' type='tel')
+                        +e.field._button
+                            +e.BUTTON.button Перезвоните мне
+                    +e.agree Отправляя заявку, Вы соглашаетесь на обработку персональных данных и политикой конфиденциальности

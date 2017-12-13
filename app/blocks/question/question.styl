@@ -12,8 +12,8 @@
     width 456px
     height 468px
     content ''
-    background-image url('../img/phone.png')
-  +below(desktop)
+    background: url('../img/phone.png') no-repeat
+  +below($tablet-landspace)
     height 26rem
     padding-x(0)
     &:after
@@ -26,14 +26,14 @@
   font-weight 700
   text-align left
   color rgb(34, 34, 34)
-  +below(desktop)
+  +below($tablet-landspace)
     text-align center
 
 .question__text
   font-size 1.125rem
   font-weight 300
   text-align left
-  +below(desktop)
+  +below($tablet-landspace)
     text-align center
 
 .question__agree
@@ -42,7 +42,7 @@
   bottom 2.25rem
   width 24rem
   font-size 0.75rem
-  +below(desktop)
+  +below($tablet-landspace)
     bottom 1rem
     left 0
     right 0
@@ -52,7 +52,7 @@
 
 .question-form
   margin-top 1.125rem
-  +below(desktop)
+  +below($tablet-landspace)
     text-align center
 
 .question-form__filed
@@ -60,7 +60,7 @@
 
 .question-form__field_button
   margin-top 2rem
-  +below(desktop)
+  +below($tablet-landspace)
     margin-top 1.2rem
 
 .question-form__label,
@@ -70,7 +70,7 @@
 .question-form__label
   font-size 14px
   color rgb(238, 238, 238)
-  +below(desktop)
+  +below($tablet-landspace)
     font-size 1.2rem
 
 .question-form__input
@@ -79,7 +79,7 @@
   padding-y(0.4rem)
   padding-x(0.625rem)
   color rgb(34, 34, 34)
-  +below(desktop)
+  +below($tablet-landspace)
     margin-x(auto)
     margin-top 1rem
 
@@ -93,5 +93,5 @@
   background-color rgb(255, 166, 77)
   color rgb(34, 34, 34)
   text-transform uppercase
-  +below(desktop)
-    width 22rem
+  +below($tablet-landspace)
+    width 22rem 

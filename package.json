@@ -71,7 +71,7 @@
     "debuga": "^1.0.2",
     "eslint": "^2.12.0",
     "eslint-loader": "^1.1.1",
-    "expose-loader": "^0.7.1",
+    "expose-loader": "^0.7.4",
     "gulp": "^3.9.0",
     "gulp-bump": "^1.0.0",
     "gulp-cached": "^1.1.0",
@@ -109,7 +109,7 @@
     "require-dir": "^0.3.2",
     "rimraf": "^2.5.0",
     "run-sequence": "^1.2.2",
-    "rupture": "^0.6.1",
+    "rupture": "^0.6.2",
     "source-map-loader": "^0.1.5",
     "spritesmith-dir-checker": "^1.0.0",
     "spritesmith-stylus-retina-template": "^1.0.0",
@@ -124,7 +124,7 @@
     "webpack-stream": "^3.1.0"
   },
   "dependencies": {
-    "inputmask": "^3.3.10",
-    "siema": "^1.4.6"
+    "inputmask": "^3.3.11",
+    "siema": "^1.4.7"
   }
 }

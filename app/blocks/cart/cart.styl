@@ -4,6 +4,8 @@
   border-left 1px solid rgb(221,221,221)
   display inline-block
   vertical-align top
+  +below($tablet-landspace)
+    border-left none
 
 .cart__link,
 .cart__prices
@@ -34,6 +36,8 @@
   margin-left 0.8rem
   font-size 14px
   color rgb(1, 1, 1)
+  +below($tablet-landspace)
+    display none
 
 .cart__text
   margin-bottom 0.5rem

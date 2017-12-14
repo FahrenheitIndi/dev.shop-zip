@@ -46,24 +46,25 @@
   color rgb(255, 255, 255)
   &:hover
     text-decoration none
+  +below($desktop)
+    padding-x(0)
 
 .sub-menu
   position absolute
   top 100%
   left 0
+  width 100%
   display block
   visibility hidden
   opacity 0
   transition .3s ease-in-out
+  text-align center
 
 .sub-menu__link
   padding-y(1rem)
-  padding-left 0.75rem
-  padding-right 4rem
   border-bottom 1px solid rgb(221, 221, 221)
   display block
   font-size 0.8rem
-  text-align center
   text-decoration none
   text-transform uppercase
   background-color rgb(255, 255, 255)

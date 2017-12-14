@@ -14,7 +14,7 @@ mixin service-order()
                         +e.INPUT.input._name(name="user_name")
                         +e.LABEL.label(for="user_name") Имя
                     +b.field._phone
-                        +e.INPUT.input._phone
+                        +e.INPUT.input._phone(type='tel' name='phone')
                         +e.LABEL.label(for="user_phone") Ваш телефон
                     +b.field._button
                         +e.INPUT.input._button(type='submit' value="Отправить")

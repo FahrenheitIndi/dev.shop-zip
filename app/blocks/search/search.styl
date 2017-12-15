@@ -4,8 +4,9 @@
   display inline-block
   vertical-align middle
   opacity 0.8
-  +below($tablet-landspace)
-    display none
+  +between($tablet-landspace, $desktop)
+    width 25rem
+    margin-left 3rem
 
 .search-form
   width 100%
@@ -21,6 +22,8 @@
   height 1rem
   border none
   font-size 0.875rem
+  +between($tablet-landspace, $desktop)
+    width 20rem
 
 .search-form__button
   width 24px

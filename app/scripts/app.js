@@ -33,9 +33,13 @@ $(() => {
 	$('.menu__item_sub').hover(() => {$('.cover').toggleClass('cover-hover');});
 	let t = 0;
 	$(window).scroll(() => {
-		let a = $(this).scrollTop();
-		a > t ? $('.header-mobile').removeClass('scroll') : $('.header-mobile').addClass('scroll'), t = a;
-
+		let a = $(window).scrollTop();
+		if ( a > t ){
+			$('.header-mobile').removeClass('scroll');
+		}else {
+			$('.header-mobile').addClass('scroll');
+		}
+		t = a;
 	});
 });
 

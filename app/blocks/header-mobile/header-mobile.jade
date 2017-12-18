@@ -1,10 +1,15 @@
+include ../mobile-menu/mobile-menu
 include ../logo/logo
 include ../search/search
 include ../info/info
+include ../mobile-search/mobile-search
 mixin header-mobile()
 
     +b.header-mobile
         +b.container-fullwidth
             +b.row
+                +mobile-menu
                 +logo
                 +info
+            +b.row
+                +mobile-search

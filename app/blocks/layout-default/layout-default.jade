@@ -22,10 +22,12 @@ html(lang='ru')
 	include ../head/head
 	+page
 		+b.heading-wrapper
-			+heading
-			+header
-			+menu
-		+header-mobile
+			+e._desktop
+				+heading
+				+header
+				+menu
+			+e._mobile
+				+header-mobile
 		+box
 			+b.content
 				block content

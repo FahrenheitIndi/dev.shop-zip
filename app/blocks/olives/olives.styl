@@ -20,6 +20,13 @@
     content ''
     background-image url('../img/olives.svg')
     transform scale(-1, 1)
+  +below($phone)
+    height auto
+    font-size 1rem
+    padding-y(1rem)
+    padding-x(2.5rem)
+    &:after, &:before
+      display none
 
 .olives__text
   position relative
@@ -28,4 +35,6 @@
   text-align center
   color rgb(1, 1, 1)
   opacity 0.8
+  +below($phone)
+    font-size inherit
 

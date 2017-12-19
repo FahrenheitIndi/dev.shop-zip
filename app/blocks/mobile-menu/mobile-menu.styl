@@ -1,15 +1,18 @@
-.mobile-list
-  position absolute
-  top 50%
-  left 15px
-
 .mobile-menu
-  padding-top 0.3rem
-  transform translateY(-50%)
+  background #fff
+  height 100%
+  left -85%
+  overflow hidden
+  position fixed
+  top 0
+  width 85%
+  z-index 1001
+  transition left 0.3s ease-in-out
+  +below($phone)
+    left -320px
+    width 320px
 
-.mobile-menu___item
-  display inline-block
-  vertical-align middle
-
-.mobile-menu .mobile-menu___item:first-child
-  margin-right 1rem
+.mobile-menu_open
+  left 0
+  overflow-y auto
+  box-shadow 0 0 32px rgba(0,0,0,0.5)

@@ -34,12 +34,18 @@ $(() => {
 	let t = 0;
 	$(window).scroll(() => {
 		let a = $(window).scrollTop();
-		if ( a > t ){
-			$('.header-mobile').removeClass('scroll');
-		}else {
-			$('.header-mobile').addClass('scroll');
-		}
+		( a > t ) ? $('.header-mobile').removeClass('scroll') : $('.header-mobile').addClass('scroll');
 		t = a;
 	});
+	$('.menu-left__link_search').click( (e) => {
+		e.preventDefault();
+		$('.mobile-search').toggleClass('mobile-search_show');
+	});
+	$('.menu-left__link_menu').click( (e) => {
+		e.preventDefault();
+		$('.wrapper').toggleClass('wrapper_open');
+		$('.mobile-menu').toggleClass('mobile-menu_open');
+	});
 });
+
 

@@ -3,6 +3,6 @@ mixin mobile-search()
     +b.mobile-search
         +b.FORM.mobile-search-form
             +b.input-group
-                +e.INPUT.search(type='text')
+                +e.INPUT.search(type='text' placeholder='Поиск' autocomplete='off')
                 +e.BUTTON.submit(type='submit')
                     +b.I.icon.icon-24 search

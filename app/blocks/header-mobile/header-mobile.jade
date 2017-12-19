@@ -1,14 +1,14 @@
-include ../mobile-menu/mobile-menu
+include ../mobile-list/mobile-list
 include ../logo/logo
 include ../search/search
 include ../info/info
 include ../mobile-search/mobile-search
-mixin header-mobile()
 
+mixin header-mobile()
     +b.header-mobile
         +b.container-fullwidth
             +b.row
-                +mobile-menu
+                +mobile-list
                 +logo
                 +info
             +b.row

@@ -2,6 +2,11 @@
   width 100%
   padding-x(15px)
   padding-bottom 10px
+  display none
+
+.mobile-search_show
+  display block
+  animation search-down 0.5s ease forwards
 
 .input-group
   position relative
@@ -11,23 +16,29 @@
   display inline-block
   vertical-align top
   height 40px
-
+  border-radius 5px
 
 .input-group__search
   position relative
   float left
   width 90%
+  padding-x(0.75rem)
   border 1px solid #ccc
-  border-radius 5px
   box-shadow inset 0 1px 1px rgba(0,0,0,0.075)
   transition border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s
   border-bottom-right-radius 0
   border-top-right-radius 0
-
 
 .input-group__submit
   width 10%
   margin-left -1px
   border-bottom-left-radius 0
   border-top-left-radius 0
+  border none
   background #ffa64d
+
+@keyframes search-down
+  0%
+    transform: translateY(-30%)
+  100%
+    transform: translateY(0)

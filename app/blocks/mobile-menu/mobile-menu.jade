@@ -1,2 +1,14 @@
 mixin mobile-menu()
-	+b.mobile-menu
+    +b.mobile-menu
+        +e.header
+            +e.A.link(href='/login/') Вход
+            +e.A.link(href='#') Регистрация
+        +b.UL.group-list
+            +e.LI.item
+                +e.A.link Запчасти для инструмента
+                +e.A.toggle
+                +b.UL.sub-group-list
+            +e.LI.item
+                +e.A.link Запчасти для бытовой техники
+                +e.A.toggle
+                +b.UL.sub-group-list

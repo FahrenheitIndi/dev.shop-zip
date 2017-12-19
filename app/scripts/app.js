@@ -44,7 +44,13 @@ $(() => {
 	$('.menu-left__link_menu').click( (e) => {
 		e.preventDefault();
 		$('.wrapper').toggleClass('wrapper_open');
+		$('.mobile-cover').length ? $('.mobile-cover').remove() : $('.wrapper').append('<div class="mobile-cover"></div>');
 		$('.mobile-menu').toggleClass('mobile-menu_open');
+	});
+	$(document).on('click', '.mobile-cover', () => {
+	    $('.mobile-menu').toggleClass('mobile-menu_open');
+        $('.wrapper').toggleClass('wrapper_open');
+        $('.mobile-cover').length ? $('.mobile-cover').remove() : $('.wrapper').append('<div class="mobile-cover"></div>');
 	});
 });
 

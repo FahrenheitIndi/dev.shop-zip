@@ -1,12 +1,13 @@
-.heading-wrapper
-  position relative
-  z-index 5
-  min-height 61px
-  background #fff
-
-.heading-wrapper___desktop
+.top-menu
   +below($tablet-landspace)
     display none
+
+.heading-wrapper
+  position relative
+  min-height 61px
+  background #fff
+  +above($tablet-landspace)
+    z-index 5
 
 .heading
   height 2.25rem

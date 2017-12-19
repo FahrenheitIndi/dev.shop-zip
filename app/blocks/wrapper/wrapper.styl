@@ -1,9 +1,25 @@
 .wrapper
-  display block
   background rgb(255,255,255)
 
 .wrapper_open
-  height 100%
-  overflow hidden
-  position fixed
-  width 100%
+  +below($tablet-landspace)
+    position fixed
+    width 100%
+    height 100%
+    overflow hidden
+
+.mobile-cover
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  background-color: rgba(0,0,0,0.5);
+  cursor: pointer;
+
+
+
+

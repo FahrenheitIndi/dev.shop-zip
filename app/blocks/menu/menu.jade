@@ -1,21 +1,22 @@
 mixin menu()
-    +b.container-fluid._dark
-        +b.container
-            +b.row
-                +b.UL.menu(role='navigation')
-                    +e.LI.item._sub
-                        +e.A.link(href='/') Запчасти для инструмента
-                        +b.UL.sub-menu
-                            +e.LI.item
-                                +e.A.link(href='') Запчасти для электроинструмента
-                    +e.LI.item._sub
-                        +e.A.link(href='/') Запчасти для бытовой техники
-                        +b.UL.sub-menu
-                            +e.LI.item
-                                +e.A.link(href='') Запчасти для электроинструмента
-                    +e.LI.item
-                        +e.A.link(href='/') Заказ запчастей
-                    +e.LI.item
-                        +e.A.link(href='/service.html') Сервисный центр
-                    +e.LI.item
-                        +e.A.link(href='/contact.html') Контакты
+    +b.navbar
+        +b.container-fluid._dark
+            +b.container
+                +b.row
+                    +b.UL.menu(role='navigation')
+                        +e.LI.item._sub
+                            +e.A.link(href='/') Запчасти для инструмента
+                            +b.UL.sub-menu
+                                +e.LI.item
+                                    +e.A.link(href='') Запчасти для электроинструмента
+                        +e.LI.item._sub
+                            +e.A.link(href='/') Запчасти для бытовой техники
+                            +b.UL.sub-menu
+                                +e.LI.item
+                                    +e.A.link(href='') Запчасти для электроинструмента
+                        +e.LI.item
+                            +e.A.link(href='/') Заказ запчастей
+                        +e.LI.item
+                            +e.A.link(href='/service.html') Сервисный центр
+                        +e.LI.item
+                            +e.A.link(href='/contact.html') Контакты

@@ -1,14 +1,14 @@
 .mobile-menu
-  background #fff
-  height 100%
-  left -85%
-  overflow hidden
   position fixed
-  top 0
-  width 85%
   z-index 1001
+  top 0
+  left -85%
+  height 100%
+  width 85%
+  overflow hidden
+  background rgb(255,255,255)
   transition left 0.3s ease-in-out
-  +below($phone)
+  +above($phone)
     left -320px
     width 320px
 
@@ -16,3 +16,41 @@
   left 0
   overflow-y auto
   box-shadow 0 0 32px rgba(0,0,0,0.5)
+
+.mobile-menu__header
+  padding-y(1rem)
+  padding-x(1.375rem)
+  overflow hidden
+  background-color rgb(239,239,239)
+
+.mobile-menu__header .mobile-menu__link:first-child
+  text-decoration underline
+.mobile-menu__header .mobile-menu__link:last-child
+  float right
+
+.mobile-menu__link
+  font-size 1.1rem
+
+.group-list
+  padding-y(1rem)
+  list-style none
+
+.group-list__item
+  position relative
+
+.group-list__link,
+.group-list__toggle
+  padding-y(0.875rem)
+  padding-x(1.375rem)
+  display block
+
+.group-list__toggle
+  position absolute
+  top 0
+  right 0
+  color rgb(1,1,1)
+
+.group-list__toggle:before
+  content: "\E5CF";
+  font-family 'Material Icons'
+  font-size: 20px;

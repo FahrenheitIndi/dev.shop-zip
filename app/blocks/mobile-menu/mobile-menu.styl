@@ -17,7 +17,8 @@
   overflow-y auto
   box-shadow 0 0 32px rgba(0,0,0,0.5)
 
-.mobile-menu__header
+.mobile-menu__header,
+.mobile-menu-info
   padding-y(1rem)
   padding-x(1.375rem)
   overflow hidden
@@ -35,10 +36,12 @@
   padding-y(1rem)
   list-style none
 
-.group-list__item
+.group-list__item,
+.sub-group-list__item
   position relative
 
 .group-list__link,
+.sub-group-list__link,
 .group-list__toggle
   padding-y(0.875rem)
   padding-x(1.375rem)
@@ -48,9 +51,27 @@
   position absolute
   top 0
   right 0
+  display block
   color rgb(1,1,1)
+  text-decoration none
 
 .group-list__toggle:before
   content: "\E5CF";
   font-family 'Material Icons'
   font-size: 20px;
+
+.group-list__toggle:hover,.group-list__toggle:focus
+  text-decoration none
+
+.group-list__toggle_open:before
+  content "\E5CE";
+
+.sub-group-list
+  margin-left 10px
+  display none
+
+.sub-group-list_open
+  display block
+
+.mobile-menu-info__item
+  white-space nowrap

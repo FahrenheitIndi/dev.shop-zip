@@ -12,10 +12,17 @@
     height 0.1875rem
     content ''
     background-color  rgb(153, 153, 153)
+  +between($tablet-portrait, $tablet-landspace)
+    font-size 1.8rem
+  +between($phone, $tablet-portrait)
+    font-size 1.5rem
+  +below($phone)
+    font-size 1.2rem
   +below($desktop)
     text-align center
     &:after
       display none
+
 
 .part
   padding-y(2rem)

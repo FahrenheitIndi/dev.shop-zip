@@ -18,6 +18,9 @@
     padding-x(0)
     &:after
       display none
+  +below($phone)
+    height 28rem
+    padding-x(1rem)
 
 
 .question__title
@@ -82,6 +85,8 @@
   +below($tablet-landspace)
     margin-x(auto)
     margin-top 1rem
+  +below($phone)
+    width auto
 
 .question-form__button
   width 11rem
@@ -94,4 +99,6 @@
   color rgb(34, 34, 34)
   text-transform uppercase
   +below($tablet-landspace)
-    width 22rem 
+    width 22rem
+  +below($phone)
+    width auto

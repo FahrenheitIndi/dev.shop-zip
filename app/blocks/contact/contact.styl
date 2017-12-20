@@ -4,7 +4,6 @@
   display inline-block
   vertical-align top
   +below($tablet-landspace)
-    padding-top 0.3rem
     transform: translateY(-50%);
 
 .contact__phone
@@ -14,7 +13,7 @@
   text-decoration none
   &:hover
     text-decoration underline
-  color rgb(1, 1, 1)
+    color rgb(1, 1, 1)
   +below($tablet-landspace)
     display none
 
@@ -38,9 +37,5 @@
     display none
 
 .contact__user
-  display block
-  width 29px
-  height 29px
-  background-image url(../img/login.svg)
   +above($tablet-landspace)
     display none

@@ -73,5 +73,30 @@
 .sub-group-list_open
   display block
 
+.mobile-menu-info
+  font-size 14px
+
 .mobile-menu-info__item
+  margin 4px 0
   white-space nowrap
+
+.mobile-menu-info__link
+  position relative
+  margin-left 24px
+
+.mobile-menu-info__link:before
+  position absolute
+  left -24px
+  font-size 18px
+  font-family 'Material Icons'
+  line-height 1.2
+  content ''
+
+.mobile-menu-info__link_phone:before
+  content '\e0cd'
+
+.mobile-menu-info__link_email:before
+  content '\e0be'
+
+.mobile-menu-info__link_address:before
+  content '\e192'

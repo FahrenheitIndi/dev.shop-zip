@@ -1,0 +1,9 @@
+include /blocks/index/index
+include /blocks/order-page/order-form/order-form
+extends /blocks/layout-default/layout-default
+
+block head
+    - var pageTitle = 'Заказ запчастей';
+
+block content
+    +order-form

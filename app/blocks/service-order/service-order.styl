@@ -5,6 +5,10 @@
   padding-y(4rem)
   background-image radial-gradient(circle at 69% 63%, #6cc0ec, #6eb3e7)
   text-align left
+  +between($phone, $tablet-portrait)
+    padding-x(4rem)
+  +below($phone)
+    padding-x(2rem)
 
 .border
   position absolute
@@ -38,13 +42,22 @@
   width calc(100%/3 - 4rem)
   display inline-block
   color rgb(54, 57, 60)
+  +below($tablet-landspace)
+    width auto
+    margin-bottom 1rem
+    display block
+
 
 .field_name
   float left
+  +below($tablet-landspace)
+    float none
 
 .field_button
   float right
   cursor pointer
+  +below($tablet-landspace)
+    float none
 
 .field__input
   width 100%
@@ -89,6 +102,10 @@
   flex-wrap wrap
   justify-content space-between
   list-style none
+  +between($phone, $tablet-portrait)
+    justify-content center
+  +below($phone)
+    justify-content center
 
 .service-list__item
   position relative
@@ -189,3 +206,7 @@
   height 10.625rem
   border-radius 50%
 
+.control__prev,
+.control__next
+  +below($tablet-landspace)
+    display none

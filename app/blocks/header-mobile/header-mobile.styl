@@ -1,13 +1,14 @@
 .header-mobile
   position relative
   z-index 999
-  margin-bottom 2rem
   width 100%
   box-shadow 0 2px 3px 0 rgba(0,0,0,0.2)
   background-color rgb(255,255,255)
   text-align center
   +above($tablet-landspace)
     display none
+  +below($phone)
+    margin-bottom 1rem
 
 .header-mobile.scroll
   animation mobile 0.5s ease forwards

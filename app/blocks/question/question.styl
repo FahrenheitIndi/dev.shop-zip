@@ -4,22 +4,24 @@
   margin-bottom 2.3rem
   padding-left 12rem
   padding-right 35rem
-  padding-y(2.25rem)
+  padding-top 2.25rem
   &:after
     position absolute
     right 0
     bottom 0
-    width 456px
-    height 468px
+    width 315px
+    height 439px
     content ''
     background: url('../img/phone.png') no-repeat
+  +between($tablet-landspace, $desktop)
+    padding-right 25rem
   +below($tablet-landspace)
     height 26rem
     padding-x(0)
     &:after
       display none
   +below($phone)
-    height 28rem
+    height auto
     padding-x(1rem)
 
 
@@ -52,6 +54,15 @@
     margin-x(auto)
     font-size 1rem
     text-align center
+  +below($phone)
+    position relative
+    bottom auto
+    left auto
+    right auto
+    width 80%
+    margin-x(auto)
+    padding-y(1rem)
+
 
 .question-form
   margin-top 1.125rem
@@ -86,7 +97,7 @@
     margin-x(auto)
     margin-top 1rem
   +below($phone)
-    width auto
+    width 70%
 
 .question-form__button
   width 11rem
@@ -101,4 +112,4 @@
   +below($tablet-landspace)
     width 22rem
   +below($phone)
-    width auto
+    width 70%

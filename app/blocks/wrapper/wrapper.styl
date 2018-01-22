@@ -1,11 +1,14 @@
 .wrapper
-  background rgb(255,255,255)
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background inherit
+
 
 .wrapper_open
   +below($tablet-landspace)
     position fixed
     width 100%
-    height 100%
     overflow hidden
 
 .mobile-cover

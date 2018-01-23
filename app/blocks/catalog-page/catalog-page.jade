@@ -2,4 +2,22 @@ include ../row/row
 
 mixin catalog-page()
     +row
-        +b.ASIDE.sidebar
+        +b.catalog-page
+            +b.sidebar
+                +b.UL.sidebar-nav
+                    +e.LI.item
+                        +e.A.link Запчасти для электроинструмента
+                    +e.LI.item
+                        +e.A.link Запчасти для электроинструмента
+                    +e.LI.item
+                        +e.A.link Запчасти для электроинструмента
+                +b.sidebar-filter
+                    +e.title Подбор параметров
+                    +b.FORM.form-filter
+                        +e.group
+                            +e.LABEL.label(for='of') От
+                            +e.INPUT.input(id='of')
+                        +e.group
+                            +e.LABEL.label(for='to') До
+                            +e.INPUT.input(id='to')
+            +b.catalog-main

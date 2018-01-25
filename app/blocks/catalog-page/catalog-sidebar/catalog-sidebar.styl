@@ -1,0 +1,78 @@
+.catalog-sidebar
+  width 315px
+  margin-right 0.5rem
+  box-shadow 0 1px 3px 0px rgba(0, 0, 0, 0.1)
+  background $white
+
+.sidebar-nav
+  padding-y(10px)
+  padding-left 1.8rem
+  padding-right 1rem
+  list-style disc
+
+.sidebar-nav__link
+  color rgb(110,179,231)
+  cursor pointer
+  &:hover
+    color rgb(35,143,223)
+    text-decoration none
+
+.sidebar-filter
+  padding-y(1.8rem)
+  padding-x(15px)
+  background rgb(237,246,252)
+  overflow hidden
+
+.sidebar-filter__title
+  font-size 1.1rem
+  font-weight 500
+
+.form-filter
+  margin-x(-15px)
+  padding-top 25px
+
+.form-filter__group
+  overflow hidden
+
+.form-filter__field
+  position relative
+  padding-x(15px)
+  width 50%
+  float left
+
+.form-filter__label
+  padding-bottom 5px
+  display block
+
+.form-filter__input
+  width 100%
+  height 38px
+  padding-x(4px)
+  font-size 18px
+  border 1px solid #ccd5db
+  border-radius 2px
+  outline none
+
+.form-filter__control
+  padding-top 2rem
+  padding-bottom 1rem
+  text-align center
+
+
+.form-filter__show,
+.form-filter__clear
+  width 100%
+  padding-y(0.6rem)
+  border none
+  background none
+
+.form-filter__show
+  background rgb(255,166,69)
+  color $black
+  border-radius 2px
+  transition all 0.2s
+  &:hover
+    background rgba(255, 166, 69, 0.9)
+
+.form-filter__clear
+  color #238FDF

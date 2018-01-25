@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import Banner from 'siema';

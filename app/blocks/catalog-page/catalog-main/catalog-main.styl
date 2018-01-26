@@ -1,0 +1,57 @@
+.catalog-list
+  display flex
+  flex-wrap wrap
+
+.catalog-item
+  width 25%
+  flex-basis 25%
+  padding 0 20px 15px 20px
+  box-shadow 0 1px 3px 0px rgba(0, 0, 0, 0.1)
+  background $white
+  text-decoration none
+  text-align center
+  cursor pointer
+  transition all 0.2s
+  &:hover
+    margin-top -8px
+    margin-bottom 8px
+    text-decoration none
+    box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
+
+.catalog-item__image,
+.catalog-item__image img
+  display block
+
+.catalog-item__title
+  color #337ab7
+  text-decoration none
+  &:hover
+    text-decoration none
+
+.catalog-item__price
+  padding-top 0.4rem
+  font-size 1.2rem
+  font-weight 500
+  color rgb(51,51,51)
+
+.catalog-item__price_old
+  padding-y(0.1rem)
+  font-size 14px
+  font-weight 400
+  color #a8a8a8
+  text-decoration line-through
+
+.catalog-item__button
+  margin 1rem
+  padding 12px 36px
+  display block
+  border-radius 3px
+  background #ff6d4b
+  color $white
+  letter-spacing 0
+  will-change box-shadow, transform
+  transition box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  &:hover
+    box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
+    outline none
+    text-decoration none

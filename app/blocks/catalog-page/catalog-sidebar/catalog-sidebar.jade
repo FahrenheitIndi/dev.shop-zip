@@ -2,11 +2,27 @@ mixin catalog-sidebar()
     +b.catalog-sidebar
         +b.UL.sidebar-nav
             +e.LI.item
-                +e.A.link Запчасти для электроинструмента
+                +e.H4.title Электробензоинструмент
+                    +b.UL.sub-sidebar-nav
+                        +e.LI.item
+                            +e.A.link Запчасти для электроинструмента
+                        +e.LI.item
+                            +e.A.link Запчасти для бензокосы и бензопилы
+                        +e.LI.item
+                            +e.A.link Расходные материалы для электро и бензо
+                        +e.LI.item
+                            +e.A.link Запчасти и комплектующие на технику
             +e.LI.item
-                +e.A.link Запчасти для электроинструмента
-            +e.LI.item
-                +e.A.link Запчасти для электроинструмента
+                +e.H4.title Бытовая техника
+                    +b.UL.sub-sidebar-nav
+                        +e.LI.item
+                            +e.A.link Запчасти для стиральных машин
+                        +e.LI.item
+                            +e.A.link Запчасти для холодильников
+                        +e.LI.item
+                            +e.A.link Запчасти для плит и водонагревателя
+                        +e.LI.item
+                            +e.A.link Запчасти для пылесосов мясорубок / СВЧ печи
         +b.sidebar-filter
             +e.title Подбор параметров
             +b.FORM.form-filter

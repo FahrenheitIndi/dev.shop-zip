@@ -12,6 +12,7 @@
   text-align center
   cursor pointer
   transition all 0.2s
+  overflow hidden
   &:hover
     margin-top -8px
     margin-bottom 8px
@@ -29,10 +30,22 @@
   margin 0 auto
 
 .catalog-item__title
+  display block
   color #337ab7
   text-decoration none
+  overflow hidden
+  white-space nowrap
+  text-overflow ellipsis
+  -moz-binding url('ellipsis.xml#ellipsis')
   &:hover
     text-decoration none
+
+@supports (display -webkit-box)
+  .catalog-item__title
+    white-space normal
+    display -webkit-box
+    -webkit-box-orient vertical
+    -webkit-line-clamp 3
 
 .catalog-item__price
   padding-top 0.4rem

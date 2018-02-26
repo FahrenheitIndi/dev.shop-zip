@@ -6,11 +6,11 @@ import Carousel from 'siema';
 import Reviews from 'siema';
 import Inputmask from 'inputmask';
 new Inputmask({mask: '+7 (999) 999-99-99'}).mask('input[type=tel]');
-let banner = document.querySelector('.banner');
+const banner = document.querySelector('.banner');
 if (banner){
 	new Banner({selector: '.banner', loop: true});
 }
-let article = document.querySelector('.article');
+const article = document.querySelector('.article');
 if (article){
 	const carousel = new Carousel({
 		selector: article,
@@ -24,7 +24,7 @@ if (article){
 	document.querySelector('.articles__button_left').addEventListener('click', () => carousel.prev());
 	document.querySelector('.articles__button_right').addEventListener('click', () => carousel.next());
 }
-let reviewsList = document.querySelector('.reviews-list');
+const reviewsList = document.querySelector('.reviews-list');
 if (reviewsList){
 	const reviews = new Reviews({
 		selector: reviewsList,
@@ -43,7 +43,7 @@ $(() => {
 	$('.menu__item_sub').hover(function () {$('.cover').toggleClass('cover-hover');});
 	let t = 0;
 	$(window).scroll( function () {
-		const headerMobile = document.querySelector('.header-mobile')
+		const headerMobile = document.querySelector('.header-mobile');
 		let a = $(this).scrollTop();
 		( a > t ) ? $(headerMobile).removeClass('scroll') : $(headerMobile).addClass('scroll');
 		t = a;

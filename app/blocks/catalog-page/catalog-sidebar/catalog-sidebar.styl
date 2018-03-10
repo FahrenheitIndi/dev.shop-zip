@@ -4,27 +4,70 @@
 
 
 .sidebar-nav
-  padding-y(10px)
-  padding-left 1.8rem
-  padding-right 1rem
+  padding-bottom 10px
+  /*padding-left 1.8rem
+  padding-right 1rem*/
   box-shadow 0 1px 3px 0px rgba(0, 0, 0, 0.1)
   background $white
 
 .sidebar-nav__title
+  margin 0
+  padding-x(1.375rem)
+  padding-y(0.875rem)
   font-size 1.3rem
   font-weight 500
+  text-align center
+  background-color #f7f7f7
 
-.sub-sidebar-nav
-  padding-top 0.5rem
-
-.sub-sidebar-nav__link
-  padding-left 5px
+.catalog-menu
   font-size 1rem
+
+.catalog-menu__item
+  position relative
+
+.catalog-menu__link
+  width 90%
+  padding-y(0.875rem)
+  padding-x(1.375rem)
   display block
-  color #337ab7
+  &:hover
+    text-decoration none
+
+.catalog-menu__toggle
+  position absolute
+  top 0
+  right 0
+  padding-y(0.875rem)
+  padding-x(1.375rem)
+  display block
+  color #010101
+  text-decoration none
   cursor pointer
   &:hover
-    color rgb(35,143,223)
+    text-decoration none
+
+.catalog-menu__toggle:before
+  content "\E5CF"
+  font-family 'Material Icons'
+  font-size 20px
+  &:hover
+    text-decoration none
+
+.catalog-menu__toggle_open:before
+  content "\E5CE"
+
+.sub-catalog-menu
+  display none
+
+.sub-catalog-menu_open
+  display block
+
+.sub-catalog-menu__link
+  padding-y(0.875rem)
+  padding-left 1.8rem
+  padding-right 1.375rem
+  display block
+  &:hover
     text-decoration none
 
 .sidebar-filter

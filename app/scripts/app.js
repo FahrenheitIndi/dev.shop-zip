@@ -68,6 +68,11 @@ $(() => {
 		$(this).toggleClass('group-list__toggle_open');
 		$(this).next('.sub-group-list').toggleClass('sub-group-list_open');
 	});
+	$('.catalog-menu__toggle').bind('click', function (e) {
+		e.preventDefault();
+		$(this).toggleClass('catalog-menu__toggle_open');
+		$(this).next('.sub-catalog-menu').toggleClass('sub-catalog-menu_open');
+	});
 });
 
 

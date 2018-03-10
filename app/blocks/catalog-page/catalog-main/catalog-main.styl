@@ -53,12 +53,16 @@
   font-weight 500
   color rgb(51,51,51)
 
-.catalog-item__price_old
+.catalog-item__price_opt
+  position relative
   padding-y(0.1rem)
   font-size 14px
   font-weight 400
-  color #a8a8a8
-  text-decoration line-through
+  color #ff6d4b
+  &:before
+    padding-right 0.5rem
+    content 'Опт:'
+    color: rgb(1,1,1)
 
 .catalog-item__button
   margin-top 1rem

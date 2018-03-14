@@ -5,6 +5,7 @@ import Banner from 'siema';
 import Carousel from 'siema';
 import Reviews from 'siema';
 import Inputmask from 'inputmask';
+
 new Inputmask({mask: '+7 (999) 999-99-99'}).mask('input[type=tel]');
 const banner = document.querySelector('.banner');
 if (banner){
@@ -72,6 +73,15 @@ $(() => {
 		e.preventDefault();
 		$(this).toggleClass('catalog-menu__toggle_open');
 		$(this).next('.sub-catalog-menu').toggleClass('sub-catalog-menu_open');
+	});
+	const tooltipElement = $('.catalog-tooltip');
+    const tooltipContainer = $('.catalog-tooltip__container');
+	tooltipElement.on('click', function () {
+		if ($(this).find(tooltipContainer).is(':hidden')){
+			$(this).find(tooltipContainer).show();
+		}else {
+			$(this).find(tooltipContainer).hide();
+		}
 	});
 });
 

@@ -114,9 +114,11 @@
 
 .login__link_callback_hidden
   visibility hidden
+
 .container-fluid_grey
    +below($tablet-landspace)
     display none
+
 
 .callback-form
   position absolute
@@ -136,6 +138,27 @@
   height auto
   width 300px
   display block
+
+.callback-form__form
+  position relative
+
+.callback-form__close
+  position absolute
+  top 0
+  right -15px
+  content ''
+  width 20px
+  height 20px
+  line-height 20px
+  font-size 30px
+  text-align center
+  color $red
+  cursor pointer
+  transform rotate(-45deg)
+  transition all .2s ease
+  will-change transform
+  &:hover
+    transform rotate(-135deg)
 
 .callback-form__title
   padding-y(10px)
@@ -181,3 +204,4 @@
     box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
     outline none
     text-decoration none
+

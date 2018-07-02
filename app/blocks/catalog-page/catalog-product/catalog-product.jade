@@ -8,8 +8,12 @@ mixin catalog-product()
                 +e.LI.item Кожух для болгарки 125 круг автоматический зажим
             +b.catalog-product(itemscope='' itemtype='http://schema.org/Product')
                 +e.H1.title(itemprop='name') Кожух для болгарки 125 круг автоматический зажим
-                +e.info
-                    +e.code Код товара: <span itemprop='model'>980049</span>
-                +e.wrap-image
-                    +e.IMG.image(src='../assets/img/product.jpg')
+                +e.model
+                    +e.code Код товара: <span itemprop='productID'>980049</span>
+                +e.wrap
+                    +e.image
+                        +e.IMG.image(itemprop='image' src='../assets/img/product.jpg')
+                    +e.pay
+                        +b.pay-block(itemprop='offers' itemscope itemtype='http://schema.org/Offer')
+                            +e.price(itemprop='price') 270 руб.
 

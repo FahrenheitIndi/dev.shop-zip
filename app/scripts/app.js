@@ -93,11 +93,20 @@ $(() => {
 		}
 	});
 	const callbackOrder = $('.login__link_callback');
+	const callbackOrderClose = $('.callback-form__close');
 	const callbackForm = $('.callback-form');
 	callbackOrder.on('click', function () {
 		$(this).addClass('login__link_callback_hidden');
 		$(this).next(callbackForm).addClass('callback-form_show');
-    });
+	});
+	callbackOrderClose.on('click', function() {
+		if( $(this).closest(callbackForm).hasClass('callback-form_show') ) {
+			$(this).closest(callbackForm).removeClass('callback-form_show');
+			if ( callbackOrder.hasClass('login__link_callback_hidden') ){
+				callbackOrder.removeClass('login__link_callback_hidden');
+			};
+		};
+	});
 });
 
 

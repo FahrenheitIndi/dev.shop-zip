@@ -100,15 +100,24 @@
     width 70%
 
 .question-form__button
-  width 11rem
-  height 2rem
+  margin-top 1rem
+  margin-bottom 0.5rem
+  padding-y(12px)
+  padding-x(48px)
+  display block
+  border-radius 3px
   border none
-  border-radius 5px
   font-size 0.875rem
   font-weight 500
-  background-color rgb(255, 166, 77)
-  color rgb(34, 34, 34)
+  background-color rgb(255,109,75)
+  color $white
   text-transform uppercase
+  will-change box-shadow, transform
+  transition box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  &:hover
+    box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
+    outline none
+    text-decoration none
   +below($tablet-landspace)
     width 22rem
   +below($phone)

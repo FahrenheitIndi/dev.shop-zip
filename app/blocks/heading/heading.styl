@@ -60,6 +60,8 @@
   float right
   height 100%
   font-size: 0.875rem;
+.user-name
+  padding-x(35px)
 
 .user-name__link
   position relative
@@ -85,11 +87,10 @@
 .login__item
   display inline-block
   vertical-align middle
-
-.login .login__item:first-child
-  margin-right 0.625rem
+  position relative
 
 .login__link
+  padding-x(10px)
   line-height 2.2rem
   display block
   text-decoration: none;
@@ -99,6 +100,84 @@
     text-decoration underline
     opacity 1
 
+.login__link_callback
+  position relative
+  padding-x(15px)
+  background-color $red
+  color $white
+  opacity 1
+  cursor pointer
+  transition all .3s ease-in-out
+  &:hover
+    transform scale(1.1)
+    text-decoration none
+
+.login__link_callback_hidden
+  visibility hidden
 .container-fluid_grey
    +below($tablet-landspace)
     display none
+
+.callback-form
+  position absolute
+  top 0
+  left -190px
+  height 0
+  padding-x(20px)
+  display none
+  background $white
+  transition all .6s ease-in-out
+  border-radius 0 0 5px 5px
+  box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
+
+.callback-form_show
+  z-index 100
+  padding-bottom 25px
+  height auto
+  width 300px
+  display block
+
+.callback-form__title
+  padding-y(10px)
+  margin-bottom 10px
+  border-bottom 1px solid rgb(221, 221, 221)
+  font-size 1.1em
+  font-weight 700
+  color $black
+  text-align center
+  text-transform uppercase
+
+.callback-form__fields
+  padding-y(5px)
+  margin-x(auto)
+  width 70%
+  text-align center
+
+.callback-form__label
+  font-size 1.1rem
+  display block
+  text-align left
+  color $black
+
+.callback-form__input
+  padding-x(10px)
+  width 100%
+  height 2rem
+  border 1px solid rgb(221, 221, 221)
+  border-radius 3px
+
+.callback-form__submit
+  margin-top 10px
+  padding-y(12px)
+  padding-x(36px)
+  width 80%
+  background $red
+  border none
+  color $white
+  letter-spacing 0
+  will-change box-shadow, transform
+  transition box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  &:hover
+    box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
+    outline none
+    text-decoration none

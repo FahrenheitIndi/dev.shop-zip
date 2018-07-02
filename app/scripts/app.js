@@ -69,13 +69,22 @@ $(() => {
 		$(this).toggleClass('group-list__toggle_open');
 		$(this).next('.sub-group-list').toggleClass('sub-group-list_open');
 	});
-	$('.catalog-menu__toggle').bind('click', function (e) {
+	const toogleMenu = $('.catalog-menu__toggle');
+	toogleMenu.bind('click', function (e) {
 		e.preventDefault();
 		$(this).toggleClass('catalog-menu__toggle_open');
 		$(this).next('.sub-catalog-menu').toggleClass('sub-catalog-menu_open');
 	});
+	toogleMenu.each(function () {if ($(this).hasClass('catalog-menu__toggle_open')){$(this).next('.sub-catalog-menu').toggleClass('sub-catalog-menu_open');}});
+	const activeMenuItem = $('.sub-catalog-menu__link');
+	activeMenuItem.each(function () {
+	    if ($(this).hasClass('sub-catalog-menu__link_active')){
+	        $(this).closest('.sub-catalog-menu').toggleClass('sub-catalog-menu_open');
+	        $(this).closest('.sub-catalog-menu').prev(toogleMenu).toggleClass('catalog-menu__toggle_open');
+	    }
+	});
 	const tooltipElement = $('.catalog-tooltip');
-    const tooltipContainer = $('.catalog-tooltip__container');
+	const tooltipContainer = $('.catalog-tooltip__container');
 	tooltipElement.on('click', function () {
 		if ($(this).find(tooltipContainer).is(':hidden')){
 			$(this).find(tooltipContainer).show();
@@ -83,6 +92,12 @@ $(() => {
 			$(this).find(tooltipContainer).hide();
 		}
 	});
+	const callbackOrder = $('.login__link_callback');
+	const callbackForm = $('.callback-form');
+	callbackOrder.on('click', function () {
+		$(this).addClass('login__link_callback_hidden');
+		$(this).next(callbackForm).addClass('callback-form_show');
+    });
 });
 
 

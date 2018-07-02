@@ -42,3 +42,4 @@ node_modules
 npm-debug.log
 .happypack/
 Будет удалено app/sprites/
+app/sprites/

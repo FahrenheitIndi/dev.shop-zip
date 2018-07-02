@@ -21,15 +21,17 @@
   line-height 3.125rem
   font-size 1.1rem
   display block
-  background rgb(50,54,57)
+  border-radius 3px
+  background rgb(255,109,75)
   text-align center
   text-decoration none
   text-transform uppercase
-  color rgb(255, 255, 255)
-  transition all .4s ease-out
+  color $white
+  will-change box-shadow, transform
+  transition box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
   &:hover
-    background rgb(166,40,62)
-    color rgb(255,255,255)
+    box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
+    outline none
     text-decoration none
   +below($tablet-landspace)
     display none

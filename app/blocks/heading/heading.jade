@@ -11,9 +11,22 @@ mixin heading()
                                 +e.A.link(href='#') Доставка
                             +e.LI.item._map
                                 +e.A.link(href='#') Карта сайта
-                        //+b.user-name
-                            //+e.A.link(href='#') Василий Кутузовский
                         +b.UL.login
+                            +e.LI.item
+                                +e.A.link._callback Заказ запчастей
+                                +b.callback-form
+                                    +e.FORM.form
+                                        +e.title Оставьте свои данные ниже
+                                        +e.fields
+                                            +e.LABEL.label._name Ваше имя:
+                                            +e.INPUT.input._name
+                                        +e.fields
+                                            +e.LABEL.label._phone Ваш телефон:
+                                            +e.INPUT.input._phone(type='tel' placeholder='+7 (XXX) XXX-XX-XX')
+                                        +e.fields._captcha
+                                        +e.fields
+                                            +e.BUTTON.submit Заказать
+                                        +e.form-field
                             +e.LI.item._in
                                 +e.A.link(href="/") Войдите
                             +e.LI.item._reg

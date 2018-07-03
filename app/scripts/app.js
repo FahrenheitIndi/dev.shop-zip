@@ -99,14 +99,32 @@ $(() => {
 		$(this).addClass('login__link_callback_hidden');
 		$(this).next(callbackForm).addClass('callback-form_show');
 	});
-	callbackOrderClose.on('click', function() {
-		if( $(this).closest(callbackForm).hasClass('callback-form_show') ) {
+	callbackOrderClose.on('click', function () {
+		if ($(this).closest(callbackForm).hasClass('callback-form_show')) {
 			$(this).closest(callbackForm).removeClass('callback-form_show');
 			if ( callbackOrder.hasClass('login__link_callback_hidden') ){
 				callbackOrder.removeClass('login__link_callback_hidden');
 			};
 		};
 	});
+	const amountButtonMinus = $('.amount__minus');
+	const amountInput = $('.amount__quantity');
+	const amountButtonPlus = $('.amount__plus');
+	amountButtonPlus.on('click', function (e) {
+		e.preventDefault();
+		amountInput.val( parseInt( amountInput.val() ) + 1 );
+		if ( amountInput.val() > 1){
+			amountButtonMinus.removeClass('amount__minus_disabled');
+		}
+    });
+    amountButtonMinus.on('click', function (e) {
+        e.preventDefault();
+        amountInput.val( parseInt( amountInput.val() ) - 1 );
+        if ( amountInput.val() == 1 ){
+        	$(this).off('click');
+            amountButtonMinus.addClass('amount__minus_disabled');
+        }
+    });
 });
 
 

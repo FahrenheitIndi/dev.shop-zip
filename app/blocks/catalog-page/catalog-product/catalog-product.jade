@@ -13,8 +13,16 @@ mixin catalog-product()
                 +e.wrap
                     +e.image
                         +e.IMG.image(itemprop='image' src='../assets/img/product.jpg')
+                    +e.desc
+                        +e.title Краткое описание
+                        +e.P Кожух для болгарки 125мм круг, автоматический зажим
                     +e.pay
                         +b.pay-block(itemprop='offers' itemscope itemtype='http://schema.org/Offer')
                             +e.price(itemprop='price') 270 руб.
-                            +e.DIV.stock Наличие: много 
+                            +e.DIV.stock Наличие: много
+                            +b.amount
+                                +e.A.minus._disabled(id='amount_minus' rel='nofollow' href='#') -
+                                +e.INPUT.quantity(name='quantity' type='text' id='quantity' value='1' autocomplete='off')
+                                +e.A.plus(id='amount_plus' rel='nofollow' href='#') +
+                                +e.SPAN.measure шт
 

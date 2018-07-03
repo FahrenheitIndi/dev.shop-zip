@@ -45,7 +45,15 @@
   width 100%
 
 .catalog-product__image
-  width 70%
+  width 40%
+
+.catalog-product__desc
+  width 30%
+  padding-x(10px)
+
+.catalog-product__title
+  padding-bottom 10px
+  font-weight 700
 
 .catalog-product__pay
   width 30%
@@ -54,14 +62,66 @@
 .pay-block
   width 100%
   padding-x(20px)
+  padding-y(20px)
   border 1px solid #e4e4e4
+  border-radius 3px
   background $white
 
 .pay-block__price
-  padding-y(10px)
+  padding-top 10px
+  padding-bottom 20px
   font-size 30px
   font-weight 700
   color $red
 
 .pay-block__stock
- padding-y(10px)
+  padding-y(10px)
+  padding-x(10px)
+  font-weight 700
+  border-radius 3px
+  background-color #dff0d8
+  color #3c763d
+
+.amount
+  padding-y(20px)
+  text-align center
+
+.amount__minus,
+.amount__quantity,
+.amount__plus,
+.amount__measure
+  height 22px
+  line-height 22px
+  font-size 1.1rem
+  font-weight 700
+  display inline-block
+  vertical-align middle
+
+.amount__minus,
+.amount__plus
+  min-width 22px
+  border-radius 2px
+  background-color #f2f2f2
+  text-align center
+  cursor pointer
+  transition background-color .3s linear
+  &:hover
+    text-decoration none
+    background-color #d3d3d3
+
+.amount__minus_disabled
+  opacity .6
+  cursor default
+  &:hover
+    background-color #f2f2f2
+
+.amount__quantity
+  max-width 50px
+  border 1px solid transparent
+  border-radius 3px
+  text-align center
+  &:focus
+    border 1px solid $red
+
+.amount__measure
+  color #a5a5a5

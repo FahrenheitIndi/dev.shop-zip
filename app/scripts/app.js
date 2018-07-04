@@ -120,10 +120,20 @@ $(() => {
     amountButtonMinus.on('click', function (e) {
         e.preventDefault();
         amountInput.val( parseInt( amountInput.val() ) - 1 );
-        if ( amountInput.val() == 1 ){
+        if ( amountInput.val() === 1 ){
         	$(this).off('click');
             amountButtonMinus.addClass('amount__minus_disabled');
         }
+    });
+    const tabItem = $('.product-tab__item');
+    const tabContent = $('.tab-content__item');
+    tabItem.on('click', function (e) {
+        e.preventDefault();
+        tabItem.removeClass('product-tab__item_active');
+        $(this).toggleClass('product-tab__item_active');
+        const tabHref = $(this).attr('href');
+        tabContent.not(tabHref).css('display','none');
+        $(tabHref).fadeIn(400);
     });
 });
 

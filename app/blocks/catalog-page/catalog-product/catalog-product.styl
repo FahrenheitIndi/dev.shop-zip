@@ -44,8 +44,40 @@
   display flex
   width 100%
 
+.catalog-product__images
+  width 45%
+
 .catalog-product__image
-  width 40%
+  max-width 100%
+  box-shadow 0 1px 3px 0px rgba(0,0,0,0.1)
+  transition all .4s ease-in-out
+  cursor pointer
+  &:hover
+    box-shadow 0 15px 10px -8px rgba(0,0,0,0.2), 0 1px 4px rgba(0,0,0,0.1)
+
+.catalog-product__thumb
+  max-width 100%
+
+.thumb-images
+  margin-top 20px
+  display flex
+  justify-content space-between
+  align-items center
+
+.thumb-images__item
+  margin-x(10px)
+  flex-grow 1
+  background $white
+  box-shadow 0 1px 3px 0px rgba(0,0,0,0.1)
+  transition all .4s ease-in-out
+  cursor pointer
+  &:hover
+    box-shadow 0 15px 10px -8px rgba(0,0,0,0.2), 0 1px 4px rgba(0,0,0,0.1)
+
+
+.thumb-images__item img
+  max-width 100%
+  text-align center
 
 .catalog-product__desc
   width 30%
@@ -56,8 +88,9 @@
   font-weight 700
 
 .catalog-product__pay
-  width 30%
+  width 25%
   padding-x(20px)
+  border-radius 3px
 
 .pay-block
   width 100%
@@ -109,6 +142,9 @@
     text-decoration none
     background-color #d3d3d3
 
+.amount__plus
+  margin-right 5px
+
 .amount__minus_disabled
   opacity .6
   cursor default
@@ -125,3 +161,67 @@
 
 .amount__measure
   color #a5a5a5
+
+.pay-block__button
+  margin-top 1rem
+  margin-bottom 0.5rem
+  padding-y(12px)
+  padding-x(36px)
+  display block
+  border-radius 3px
+  font-weight 700
+  background $red
+  color $white
+  letter-spacing 0
+  text-align center
+  text-transform uppercase
+  cursor pointer
+  will-change box-shadow, transform
+  transition box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  &:hover
+    box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
+    outline none
+    text-decoration none
+
+.product-tab
+  margin-top 50px
+  width 100%
+  background $white
+
+.product-tab li
+  display inline-block
+
+.product-tab__item
+  position relative
+  min-width 50px
+  padding-x(15px)
+  padding-y(10px)
+  font-size 0.8rem
+  font-weight 600
+  display block
+  text-transform uppercase
+  white-space nowrap
+  cursor pointer
+  &:hover
+    text-decoration underline
+    &:after
+      height 3px
+  &:after
+    content ""
+    height 0
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    background #1485ce
+    transition all 250ms ease
+
+
+.product-tab__item_active
+  &:after
+    height 3px
+
+.tab-content
+  padding-x(15px)
+  padding-y(15px)
+  background $white

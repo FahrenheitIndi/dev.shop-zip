@@ -11,8 +11,16 @@ mixin catalog-product()
                 +e.model
                     +e.code Код товара: <span itemprop='productID'>980049</span>
                 +e.wrap
-                    +e.image
+                    +e.images
                         +e.IMG.image(itemprop='image' src='../assets/img/product.jpg')
+                        +e.DIV.thumb
+                            +b.UL.thumb-images
+                                +e.LI.item
+                                    +e.IMG(itemprop='image' src='../assets/img/product.jpg')
+                                +e.LI.item
+                                    +e.IMG(itemprop='image' src='../assets/img/product.jpg')
+                                +e.LI.item
+                                    +e.IMG(itemprop='image' src='../assets/img/product.jpg')
                     +e.desc
                         +e.title Краткое описание
                         +e.P Кожух для болгарки 125мм круг, автоматический зажим
@@ -25,4 +33,17 @@ mixin catalog-product()
                                 +e.INPUT.quantity(name='quantity' type='text' id='quantity' value='1' autocomplete='off')
                                 +e.A.plus(id='amount_plus' rel='nofollow' href='#') +
                                 +e.SPAN.measure шт
+                            +e.A.button Купить
+                +e.description
+                    +b.UL.product-tab
+                        +e.LI
+                            +e.A.item._active(href="#tab-description") Описание
+                        +e.LI
+                            +e.A.item(href="#tab-character") Характеристики
+                        +e.LI
+                            +e.A.item(href="#tab-comments") Комментарии
+                    +b.tab-content
+                        +e.item(id='tab-description') Кожух для болгарки 125мм круг, автоматический зажим
+                        +e.item(id='tab-character')
+                        +e.item(id='tab-comments')
 

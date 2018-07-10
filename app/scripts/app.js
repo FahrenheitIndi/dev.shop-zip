@@ -120,9 +120,8 @@ $(() => {
     amountButtonMinus.on('click', function (e) {
         e.preventDefault();
         amountInput.val( parseInt( amountInput.val() ) - 1 );
-        if ( amountInput.val() === 1 ){
-        	$(this).off('click');
-            amountButtonMinus.addClass('amount__minus_disabled');
+        if ( amountInput.val() == 1 ){
+            amountButtonMinus.off('click').addClass('amount__minus_disabled');
         }
     });
     const tabItem = $('.product-tab__item');

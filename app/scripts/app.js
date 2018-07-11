@@ -110,19 +110,26 @@ $(() => {
 	const amountButtonMinus = $('.amount__minus');
 	const amountInput = $('.amount__quantity');
 	const amountButtonPlus = $('.amount__plus');
+
 	amountButtonPlus.on('click', function (e) {
 		e.preventDefault();
+		const maxQuantity = parseInt(amountInput.attr('max'));
+		if ( parseInt( amountInput.val() ) === maxQuantity){
+			$(this).off('click').addClass('amount__plus_disabled');
+		}
 		amountInput.val( parseInt( amountInput.val() ) + 1 );
 		if ( amountInput.val() > 1){
 			amountButtonMinus.removeClass('amount__minus_disabled');
 		}
+		console.log(amountInput.val());
     });
     amountButtonMinus.on('click', function (e) {
         e.preventDefault();
-        amountInput.val( parseInt( amountInput.val() ) - 1 );
-        if ( amountInput.val() == 1 ){
-            amountButtonMinus.off('click').addClass('amount__minus_disabled');
-        }
+        console.log(amountInput.val());
+		if ( parseInt( amountInput.val() ) === 1 ){
+			$(this).off('click').addClass('amount__minus_disabled');
+		}
+		amountInput.val( parseInt( amountInput.val() ) - 1 );
     });
     const tabItem = $('.product-tab__item');
     const tabContent = $('.tab-content__item');

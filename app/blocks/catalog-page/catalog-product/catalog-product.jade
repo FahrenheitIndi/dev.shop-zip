@@ -24,12 +24,13 @@ mixin catalog-product()
                         +b.pay-block(itemprop='offers' itemscope itemtype='http://schema.org/Offer')
                             +e.price(itemprop='price') 270 руб.
                             +e.DIV.stock Наличие: много
-                            +b.amount
-                                +e.A.minus._disabled(id='amount_minus' rel='nofollow' href='#') -
-                                +e.INPUT.quantity(name='quantity' type='text' id='quantity' value='1' autocomplete='off')
-                                +e.A.plus(id='amount_plus' rel='nofollow' href='#') +
-                                +e.SPAN.measure шт
-                            +e.A.button Купить
+                            +b.FORM.add2basket(method='POST')
+                                +b.amount
+                                    +e.A.minus._disabled(id='amount_minus' rel='nofollow' href='#') -
+                                    +e.INPUT.quantity(name='quantity' type='text' id='quantity' value='1' autocomplete='off' max='5')
+                                    +e.A.plus(id='amount_plus' rel='nofollow' href='#') +
+                                    +e.SPAN.measure шт
+                                +e.A.button Купить
                 +e.description
                     +b.UL.product-tab
                         +e.LI

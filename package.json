@@ -128,6 +128,7 @@
   },
   "dependencies": {
     "inputmask": "^3.3.11",
+    "magnific-popup": "^1.1.0",
     "popper.js": "^1.14.3",
     "siema": "^1.5.1",
     "tippy.js": "^2.5.2",

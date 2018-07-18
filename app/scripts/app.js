@@ -5,6 +5,7 @@ import Banner from 'siema';
 import Carousel from 'siema';
 import Reviews from 'siema';
 import Inputmask from 'inputmask';
+require('magnific-popup');
 
 new Inputmask({mask: '+7 (999) 999-99-99'}).mask('input[type=tel]');
 const banner = document.querySelector('.banner');
@@ -110,17 +111,24 @@ $(() => {
 	const amountButtonMinus = $('.amount__minus');
 	const amountInput = $('.amount__quantity');
 	const amountButtonPlus = $('.amount__plus');
-    const maxQuantity = parseInt(amountInput.attr('max'));
     amountButtonPlus.on('click', function (e) {
-        console.log(parseInt(amountInput.val()));
+        let maxQuantity = parseInt(amountInput.attr('max'));
+        let countVal = parseInt( amountInput.val() ) + 1;
         amountInput.val( parseInt( amountInput.val() ) + 1 );
+        countVal = countVal > maxQuantity ? maxQuantity : countVal;
+        amountInput.val(countVal);
         amountInput.change();
+        if (countVal > 1) {
+            amountButtonMinus.removeClass('amount__minus_disabled');
+        }
         e.preventDefault();
     });
     amountButtonMinus.on('click', function (e) {
-        console.log(parseInt(amountInput.val()));
         let countVal =  parseInt( amountInput.val() ) - 1;
         countVal = countVal < 1 ? 1 : countVal;
+        if (countVal <= 1) {
+            $(this).addClass('amount__minus_disabled');
+        }
         amountInput.val(countVal);
         amountInput.change();
         e.preventDefault();
@@ -134,6 +142,19 @@ $(() => {
         const tabHref = $(this).attr('href');
         tabContent.not(tabHref).css('display','none');
         $(tabHref).fadeIn(400);
+    });
+    const mainImage = $('.catalog-product__image');
+    const mainImageLink = $('.catalog-product__link');
+    const thumbLink = $('.thumb-images__link');
+
+    thumbLink.on('click', function (e) {
+        e.preventDefault();
+        mainImage.attr('src', $(this).attr('href'));
+        mainImageLink.attr('href', $(this).attr('href'));
+    });
+    mainImageLink.magnificPopup({
+        type: 'image',
+        closeOnContentClick: true
     });
 });
 

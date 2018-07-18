@@ -44,11 +44,15 @@
   display flex
   width 100%
 
+.catalog-product__link
+  display block
+
 .catalog-product__images
   width 45%
 
 .catalog-product__image
   max-width 100%
+  display block
   box-shadow 0 1px 3px 0px rgba(0,0,0,0.1)
   transition all .4s ease-in-out
   cursor pointer
@@ -58,11 +62,15 @@
 .catalog-product__thumb
   max-width 100%
 
+.thumb-images__link
+  display block
+
 .thumb-images
   width 100%
   margin-top 20px
   display flex
   justify-content space-between
+  line-height 0
 
 .thumb-images__item
   margin-x(10px)
@@ -167,12 +175,21 @@
 .amount__measure
   color #a5a5a5
 
+.amount__amount-error{
+  padding-x(10px)
+  padding-y(10px)
+  display none
+  color: $red;
+}
+
 .add2basket__button
+  width 100%
   margin-top 1rem
   margin-bottom 0.5rem
   padding-y(12px)
   padding-x(36px)
   display block
+  border none
   border-radius 3px
   font-weight 700
   background $red

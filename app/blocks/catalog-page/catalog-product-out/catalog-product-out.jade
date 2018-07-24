@@ -1,4 +1,4 @@
-mixin catalog-product()
+mixin catalog-product-out()
     +b.container
         +b.row
             +b.UL.breadcrumbs
@@ -27,16 +27,13 @@ mixin catalog-product()
                         +e.P Кожух для болгарки 125мм круг, автоматический зажим
                     +e.pay
                         +b.pay-block(itemprop='offers' itemscope itemtype='http://schema.org/Offer')
-                            +e.price(itemprop='price') 270 руб.
-                            +e.DIV.stock Наличие: много
-                            +b.FORM.add2basket(method='POST')
-                                +b.amount
-                                    +e.A.minus._disabled(id='amount_minus' rel='nofollow' href='#') -
-                                    +e.INPUT.quantity(name='quantity' type='text' id='quantity' value='1' autocomplete='off' max='5')
-                                    +e.A.plus(id='amount_plus' rel='nofollow' href='#') +
-                                    +e.SPAN.measure шт
-                                    +e.amount-error На складе нет нужно количества
-                                +e.BUTTON.button Купить
+                            +e.out-of-stock Товара <b>нет в наличии</b>, но вы можете оставить заявку и мы поможем вам его найти
+                            +b.FORM.outstock-form(method='POST')
+                                +e.fields
+                                    +e.LABEL.label(for='phone') Ваш телефон:
+                                    +e.INPUT.input(id='phone' type='tel' placeholder='+7 (XXX) XXX-XX-XX')
+                                +e.fields
+                                    +e.BUTTON.submit Заказать
                 +e.description
                     +b.UL.product-tab
                         +e.LI

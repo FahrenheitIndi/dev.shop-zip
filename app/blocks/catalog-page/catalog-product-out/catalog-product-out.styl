@@ -252,3 +252,51 @@
   padding-x(15px)
   padding-y(15px)
   background $white
+
+.pay-block__out-of-stock
+  padding-y(10px)
+  text-align center
+  line-height 1.2
+  word-break normal
+
+.outstock-form
+  padding-y(10px)
+
+.outstock-form__fields
+  margin-x(auto)
+  width 80%
+
+.outstock-form__label
+  padding-y(5px)
+  font-size 1.1rem
+  display block
+  text-align left
+
+.outstock-form__input
+  padding-x(10px)
+  height 2rem
+  border 1px solid #ddd
+  border-radius 3px
+
+.outstock-form__submit
+  width 100%
+  margin-top 1rem
+  margin-bottom 0.5rem
+  padding-y(12px)
+  padding-x(36px)
+  display block
+  border none
+  border-radius 3px
+  font-weight 700
+  background $red
+  color $white
+  letter-spacing 0
+  text-align center
+  text-transform uppercase
+  cursor pointer
+  will-change box-shadow, transform
+  transition box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+  &:hover
+    box-shadow 0 15px 10px -8px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.1)
+    outline none
+    text-decoration none

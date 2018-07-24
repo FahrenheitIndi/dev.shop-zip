@@ -149,6 +149,8 @@ $(() => {
 
     thumbLink.on('click', function (e) {
         e.preventDefault();
+        thumbLink.removeClass('thumb-images__link_active');
+        $(this).toggleClass('thumb-images__link_active');
         mainImage.attr('src', $(this).attr('href'));
         mainImageLink.attr('href', $(this).attr('href'));
     });
